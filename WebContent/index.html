@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+
+<title>即时通讯</title>
+</head>
+
+<body background="Image/jae-park-1672077-unsplash.jpg"
+	style="background-size: cover;">
+
+		<nav class="nav justify-content-end">
+		<a class="btn btn-info" data-toggle="modal" data-target="#login"
+			href="">登录</a>&ensp; <a class="btn btn-info" data-toggle="modal"
+			data-target="#register" href="">注册</a> <a id="usernameTag"
+			class="nav-link disabled" href="#"></a>
+	</nav>
+
+	<div class="card  text-center">
+
+		<div class="card-body">
+			<h4 class="card-title">
+				<p class="text-info">即时通讯</p>
+			</h4>
+			<p class="card-text">
+			<h1 class="display-4">
+				<p class="text-muted">乐&ensp;·&ensp;在&ensp;·&ensp;沟&ensp;·&ensp;通</p>
+			</h1>
+			</p>
+		</div>
+	</div>
+	<!-- 注册窗口 -->
+	<div id="register" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content alert alert-primary">
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-title">
+					<h1 class="text-center">注册</h1>
+				</div>
+				<div class="modal-body">
+					<form id="registerForm">
+						<div class="form-group">
+							<label for="">账号</label> <input class="form-control" type="text"
+								placeholder="6-15位字母或数字" name="account">
+						</div>
+
+						<div class="form-group">
+							<label for="">密码</label> <input class="form-control"
+								type="password" placeholder="至少6位字母或数字" name="password">
+						</div>
+						<div class="form-group">
+							<label for="">再次输入密码</label> <input class="form-control"
+								type="password" placeholder="至少6位字母或数字" name="password2">
+						</div>
+						<div class="form-group">
+							<label for="">用户名</label> <input class="form-control" type="text"
+								placeholder="" name="username">
+						</div>
+						<div class="text-right">
+							<input type="button" class="btn btn-primary" onclick="register()"
+								value="注册" /> <input type="button" class="btn btn-danger"
+								data-dismiss="modal" value="取消" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="login" class="modal fade" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content alert alert-primary">
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<div class="modal-title">
+					<h1 class="text-center">登录</h1>
+				</div>
+				<div class="modal-body">
+					<form id="loginForm">
+						<div class="form-group">
+							<label for="">账号</label> <input class="form-control" type="text"
+								placeholder="" name="account" />
+						</div>
+						<div class="form-group">
+							<label for="">密码</label> <input id="inpassword" class="form-control"
+								type="password" placeholder="至少6位字母或数字" name="password" value=""/>
+						</div>
+						<div class="text-right">
+							<input type="button" class="btn btn-primary" onclick="login()"
+								value="登录" /> <input type="button" class="btn btn-danger"
+								data-dismiss="modal" value="取消" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>  -->
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+</body>
+</html>

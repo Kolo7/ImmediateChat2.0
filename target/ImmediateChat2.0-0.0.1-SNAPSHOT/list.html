@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>列表</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+</head>
+
+<body background="Image/eberhard-grossgasteiger-1664766-unsplash.jpg"
+	style="background-size: cover;">
+	<div class="container">
+		<nav class="navbar navbar-expand bg-light">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#">首页</a></li>
+			</ul>
+			<ul class="navbar-nav">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			</ul>
+			<a class="btn btn-secondary"
+				href="http://localhost:8080/ImmediateChat2.0/">退出登录</a>&ensp; <a
+				id="usernameTag" class="nav-link disabled" href="#"> </a>
+		</nav>
+
+		<div class="card">
+			<!-- 选项卡 -->
+			<ul class="nav nav-tabs">
+				<li class="nav-item"><a class="nav-link" data-toggle="tab"
+					id="navitem1" href="#home"><text class="text-muted">消息</text></a></li>
+				<li class="nav-item" id="groupchat"><a class="nav-link"
+					data-toggle="tab" href="#menu1"><text class="text-muted">群聊</text></a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab"
+					href="#menu2"><text class="text-muted">在线用户</text></a></li>
+			</ul>
+
+			<!-- 选项卡对应内容 -->
+			<div class="tab-content">
+				<div class="tab-pane container fade" id="home">
+					<div class="card" style="min-width: 500px;">
+						<div class="card-body">
+							<h4 id="privateuser" class="card-title">先选择一位好友</h4>
+							<p class="card-text">
+								<textarea id="privatemsg" rows="1" class="form-control"></textarea>
+							</p>
+							<input id="inprivatesend" style="float: right;" name=""
+								onclick="send();" class="btn btn-primary" type="button"
+								value="私发" />
+						</div>
+					</div>
+					<br>
+
+				</div>
+
+
+				<div class="tab-pane container fade" id="menu1">
+					<div class="card">
+
+						<div class="card-body">
+							<h5 class="card-title">和大家说说</h5>
+							<!-- <p class="card-text"> -->
+							<form>
+								<div class="form-group">
+									<textarea id="msg" placeholder="在这里输入" class="form-control"
+										name="inputarea" id="" rows="2" value="1"></textarea>
+								</div>
+
+								<input style="float: right;" name="" id="insend" onclick="sendall();"
+									class="btn btn-primary" type="button" value="发送">
+							</form>
+
+						</div>
+					</div>
+					当前在线人数：<text id="onlineCount">0</text>
+					<br>
+
+				</div>
+				<div class="tab-pane container fade" id="menu2">
+					<div class="table-responsive-sm">
+						<table class="table table-hover ">
+							<thead>
+								<tr>
+									<th>好友</th>
+									<th>时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody id="users">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+		<script src="list.js"></script>
+</body>
+</html>
+
+<style type="text/css">
+#home, #menu1, #menu2 {
+	min-height: 300px;
+}
+</style>
